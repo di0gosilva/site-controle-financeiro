@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMART CASH</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!--REMIXICON-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body class="pagina-principal">
+    <section class="barra-lateral">
+        <div class="box-logo">
+            <a href="#">
+                <img class="img-logo" src="./assets/img/logo.svg" alt="logo">
+                <div class="texto-logo">
+                    <h2 class="smart">SMARTCASH</h2>
+                </div>
+            </a>
+        </div>
+
+        <nav class="icons-menu">
+            <a href="#add-entrada"><i class="ri-arrow-down-circle-fill"></i> <span>Entradas</span></a>
+            <a href="#add-despesa"><i class="ri-arrow-up-circle-fill"></i> <span>Saídas</span></a>
+            <a href="#graficos"><i class="ri-funds-box-line"></i> <span>Gráficos</span></a>
+        </nav>
+
+        <div class="user">
+            <button class="button-sair"><i class="ri-logout-circle-r-line"></i> Sair</button>
+        </div>
+    </section>
+    
+    <main class="area-principal">
+        <section id="resumo">
+            <h2>Resumo</h2>
+            <div class="box-saldos">
+                <div class="div-entradas">
+                    <h3>Entradas</h3>
+                    <i class="ri-arrow-down-circle-fill"></i>
+                    <span class="saldo-entrada">R$ 0,00</span>
+                </div>
+
+                <div class="div-saidas">
+                    <h3>Saídas</h3>
+                    <i class="ri-arrow-up-circle-fill"></i>
+                    <span class="saldo-saida">R$ 0,00</span>
+                </div>
+
+                <div class="div-saldo-mes">
+                    <h3>Saldo do Mês</h3>
+                    <i class="ri-exchange-dollar-line"></i>
+                    <span class="saldo-mes">R$ 0,00</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="add-entrada">
+            <h2>Entradas</h2>
+            <form id="form-entrada">
+                <input type="datetime" id="data-entrada" placeholder="01/01/2024" required>
+                <input type="text" id="descricao-entrada" placeholder="Descrição" required>
+                <input type="text" id="valor-entrada" placeholder="Valor" required>
+                <button type="submit" id="submit-button-entrada">Adicionar</button>
+            </form>  
+        </section>
+
+        <section>
+            <div id="lista-entrada">
+                <!--dados entrada aparecem aqui-->
+            </div>
+        </section>
+
+        <section id="add-despesa">
+            <h2>Despesas</h2>
+            <form id="form-despesa">
+                <input type="datetime" id="data" placeholder="01/01/2024" required>
+                <input type="text" id="descricao" placeholder="Descrição" required>
+                <input type="text" id="valor" placeholder="Valor" required>
+                <select id="categoria">
+                    <option value="Alimentação">Alimentação</option>
+                    <option value="Aluguel">Aluguel</option>
+                    <option value="Assinaturas">Assinaturas</option>
+                    <option value="Beleza">Beleza</option>
+                    <option value="Casa">Casa</option>
+                    <option value="Contas">Contas</option>
+                    <option value="Educação">Educação</option>
+                    <option value="Essencial">Essencial</option>
+                    <option value="Lazer">Lazer</option>
+                    <option value="Mercado">Mercado</option>
+                    <option value="Outros">Outros</option>
+                    <option value="Presentes">Presentes</option>
+                    <option value="Roupa">Roupa</option>
+                    <option value="Saúde">Saúde</option>
+                    <option value="Transporte">Transporte</option>
+                    <option value="Viagem">Viagem</option>
+                </select>
+                <button type="submit" id="submit-button-despesa">Adicionar</button>
+            </form>
+        </section>
+        
+        <section>
+            <div id="lista-despesa">
+                <!--dados despesa aparecem aqui-->
+            </div>
+        </section>
+
+        <section id="graficos">
+            <h2>Gráficos</h2>
+            <div class="graficos">
+                <div class="saldo-chart">
+                    <canvas id="saldo-chart"></canvas>
+                </div>
+
+                <div class="entradas-chart">
+                    <canvas id="entradas-chart"></canvas>
+                </div>
+
+                <div class="despesas-chart">
+                    <canvas id="despesas-chart"></canvas>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--JAVASCRIPT-->
+    <script src="./assets/js/script.js" defer></script>
+    <!--CHARTS.JS-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>

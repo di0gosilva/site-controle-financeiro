@@ -1,0 +1,440 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root{
+    /* Colors */
+    --primary-100: #85E2B9;
+    --primary-200: #64C99D;
+    --primary-300: #31B079;
+    --accent-100: #12DE86;
+    --accent-200: #19a568;
+    --text-100: #010403;
+    --text-200: #071210;
+    --bg-100: #F3F3F3;
+    --bg-200: #D5E0DC;
+    --bg-300: #CCD6D2;
+    --white-color: #F9F9F9;
+
+    /* Font */
+    /* .5rem = 8px | 1rem = 16px ... */
+    --font-family: "Manrope", sans-serif;
+    --biggest-font-size: 3rem;
+    --big-font-size: 1.5rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --font-regular: 400;
+    --font-semi-bold: 600;
+    --font-bold: 700;
+}
+
+/* Responsive Font */
+@media screen and (min-width: 1150px) {
+    :root{
+        --biggest-font-size: 5.5rem;
+        --big-font-size: 2.75rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1.125rem;
+        --small-font-size: .875rem;
+    }
+}
+
+/* Base */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body,
+input,
+textarea,
+select,
+option,
+button{
+    font-family: var(--font-family);
+    font-size: var(--normal-font-size);
+}
+
+input,
+button,
+textarea,
+select,
+option{
+    border: none;
+    outline: none;
+}
+
+body.cadastro,
+body.login{
+    height: 100vh;
+    background-color: var(--primary-100);
+
+    display: grid;
+    grid-template-rows: 70px 1fr;
+    grid-template-areas: 
+        "header"
+        "main";
+}
+
+body.pagina-principal{
+    height: 100vh;
+    background: rgb(249,249,249);
+    background: linear-gradient(156deg, rgba(249,249,249,1) 0%, rgba(243,243,243,1) 35%, rgba(213,224,220,1) 100%);
+    /* background-color: var(--white-color); */
+    color: var(--text-100);
+
+    display: grid;
+    grid-template-columns: 250px 1fr;
+}
+
+a{
+    text-decoration: none;
+    color: var(--text-100);
+}
+
+input,
+select{
+    background-color: var(--white-color);
+}
+
+button{
+    background-color: var(--primary-100);
+    transition: all .3s ease-in-out;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: var(--primary-200);
+}
+
+/* HEADER */
+header{
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px 10px 20px;
+    /* background-color: var(--bg-200); */
+}
+
+button.btn-cadastrar,
+button.btn-entrar{
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: var(--font-bold);
+    background-color: var(--primary-200);
+}
+
+button.btn-cadastrar:hover,
+button.btn-entrar:hover{
+    background-color: var(--primary-300);
+}
+
+main.main-login{
+    grid-area: main;
+}
+
+/* SECTION - FORM LOGIN */
+.form-login{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.div-login{
+    height: 300px;
+    width: 400px;
+    border-radius: 10px;
+    background-color: var(--bg-200);
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    justify-content: center;
+}
+
+.div-login h2{
+    margin-bottom: 10px;
+}
+
+.box-cadastro{
+    width: 400px;
+    margin-top: 15px;
+    border-radius: 10px;
+    background-color: var(--bg-200);
+    display: flex;
+    align-items: center;
+    padding: 20px 30px;
+    justify-content: space-around;
+}
+
+button.fazer-cadastro-2,
+button.fazer-login-2{
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: 10px;
+    width: 50%;
+}
+
+/* BARRA LATERAL */
+.barra-lateral{
+    background-color: var(--primary-100);
+    padding: .6rem;
+    grid-column: 1 / 2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header .box-logo a,
+.barra-lateral .box-logo a{
+    color: var(--text-100);
+    display: flex;
+    margin-left: 7px;
+    margin-top: 5px;
+}
+
+header .img-logo,
+.barra-lateral .img-logo{
+    width: 50px;
+    margin-right: .7rem;
+}
+
+header .texto-logo,
+.barra-lateral .texto-logo{
+    font-size: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.barra-lateral .icons-menu,
+.barra-lateral .user{
+    display: flex;
+    flex-direction: column;
+    /* font-size: 1.5rem; */
+}
+
+.barra-lateral .icons-menu a{
+    background-color: var(--bg-100);
+    color: var(--text-100);
+    margin: .4rem;
+    padding: .8rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    transition: all .3s ease-in-out;
+}
+
+.barra-lateral .user button{
+    color: var(--text-100);
+    margin: .4rem;
+    padding: .8rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    background-color: var(--primary-200);
+    transition: all .3s ease-in-out;
+}
+
+.barra-lateral .user button:hover{
+    background-color: var(--primary-300);
+}
+
+.barra-lateral .icons-menu a span,
+.barra-lateral .user button{
+    font-weight: 800;
+    font-size: 1.05rem;
+}
+
+.barra-lateral .icons-menu a:hover{
+    background-color: var(--primary-200);
+}
+
+.barra-lateral .icons-menu a i,
+.barra-lateral .user button i{
+    margin-right: 1rem;
+    font-size: 1.7rem;
+}
+
+/* AREA PRINCIPAL */
+.area-principal{
+    grid-column: 2 / 3;
+    overflow-y: auto;
+}
+
+/* FORM - ENTRADAS & DESPESAS */
+#resumo,
+#add-entrada,
+#add-despesa{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    margin: 20px 20px 10px 20px;
+    background-color: var(--bg-100);
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.div-login h2,
+#graficos h2,
+#resumo h2,
+#add-entrada h2,
+#add-despesa h2{
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.div-login input,
+.div-login select,
+.div-login button,
+#add-entrada input,
+#add-entrada select,
+#add-entrada button,
+#add-despesa input,
+#add-despesa select, 
+#add-despesa button{
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    /* font-size: 1rem; */
+}
+
+#resumo .box-saldos{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#resumo .div-entradas,
+#resumo .div-saidas,
+#resumo .div-saldo-mes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--primary-100);
+    padding: .8rem;
+    height: 100px;
+    width: 160px;
+    border-radius: 10px;
+}
+
+#resumo .div-entradas i,
+#resumo .div-saidas i,
+#resumo .div-saldo-mes i{
+    margin: 3px 0;
+    font-size: 1.2rem;
+}   
+
+#resumo .div-entradas span,
+#resumo .div-saidas span,
+#resumo .div-saldo-mes span{
+    font-weight: var(--font-bold);
+}
+
+/* LISTA ENTRADAS & DESPESAS */
+#lista-entrada,
+#lista-despesa{
+    margin-top: 20px;
+}
+
+#lista-entrada .entrada,
+#lista-despesa .despesa{
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    padding: 10px 15px;
+    margin: 0 20px 10px 20px;
+    background-color: var(--bg-100);
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.card-valor-descricao{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    font-weight: var(--font-bold);
+    flex-grow: 1;
+    position: relative;
+}
+
+button i{
+    font-size: 1.2rem;
+}
+
+.botoes{
+    display: flex;
+    gap: 10px;
+}
+
+.categoria, 
+.data{
+    font-size: .8rem;
+    color: var(--text-200);
+}
+
+.descricao{
+    white-space: nowrap;
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.valor,
+.valor-entrada {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    min-width: 100px;
+    text-align: left;
+}
+
+.data,
+.data-entrada{
+    padding-top: 2px;
+}
+
+.editar-despesa,
+.editar-entrada,
+.remover-entrada,
+.remover-despesa{
+    padding: 4px;
+    border-radius: 5px;
+}
+
+/* GRÁFICOS */
+#graficos{
+    padding: 20px;
+    margin: 20px 20px 10px 20px;
+    background-color: var(--bg-100);
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.graficos{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+
+.saldo-chart,
+.entradas-chart,
+.despesas-chart{
+    width: 350px;
+    height: 350px;
+}

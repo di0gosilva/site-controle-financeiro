@@ -29,7 +29,7 @@
     --font-bold: 700;
 }
 
-/* Responsive Font */
+/* Fonts Responsivo */
 @media screen and (min-width: 1150px) {
     :root{
         --biggest-font-size: 5.5rem;
@@ -92,7 +92,7 @@ body.pagina-principal{
     color: var(--text-100);
 
     display: grid;
-    grid-template-columns: 250px 1fr;
+    grid-template-columns: 80px 1fr;
 }
 
 a{
@@ -121,13 +121,14 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 30px 10px 20px;
+    padding: 20px 20px 10px 5px;
     /* background-color: var(--bg-200); */
 }
 
 button.btn-cadastrar,
 button.btn-entrar{
-    padding: 10px;
+    margin-top: 5px;
+    padding: 8px;
     border-radius: 10px;
     font-weight: var(--font-bold);
     background-color: var(--primary-200);
@@ -152,7 +153,7 @@ main.main-login{
 
 .div-login{
     height: 300px;
-    width: 400px;
+    width: 300px;
     border-radius: 10px;
     background-color: var(--bg-200);
     display: flex;
@@ -166,7 +167,7 @@ main.main-login{
 }
 
 .box-cadastro{
-    width: 400px;
+    width: 300px;
     margin-top: 15px;
     border-radius: 10px;
     background-color: var(--bg-200);
@@ -176,12 +177,19 @@ main.main-login{
     justify-content: space-around;
 }
 
+button.fazer-cadastro,
+button.validar-login{
+    font-weight: var(--font-semi-bold);
+}
+
 button.fazer-cadastro-2,
 button.fazer-login-2{
     padding: 5px;
     border-radius: 5px;
-    margin-left: 10px;
-    width: 50%;
+    /* margin-left: 10px; */
+    /* width: 50%; */
+    padding: 7px;
+    font-weight: var(--font-semi-bold);
 }
 
 /* BARRA LATERAL */
@@ -205,13 +213,17 @@ header .box-logo a,
 
 header .img-logo,
 .barra-lateral .img-logo{
-    width: 50px;
-    margin-right: .7rem;
+    width: 45px;
+    margin-right: .4rem;
+}
+
+h2.smart{
+    display: none;
 }
 
 header .texto-logo,
 .barra-lateral .texto-logo{
-    font-size: 1rem;
+    font-size: .9rem;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -231,7 +243,7 @@ header .texto-logo,
     padding: .8rem;
     border-radius: 10px;
     display: flex;
-    align-items: center;
+    align-items: center; 
     transition: all .3s ease-in-out;
 }
 
@@ -264,6 +276,16 @@ header .texto-logo,
 .barra-lateral .user button i{
     margin-right: 1rem;
     font-size: 1.7rem;
+    place-items: center;
+    margin-left: -2px;
+}
+
+.span-resumo,
+.span-entradas,
+.span-saidas,
+.span-graficos,
+.span-sair{
+    display: none;
 }
 
 /* AREA PRINCIPAL */
@@ -312,8 +334,13 @@ header .texto-logo,
     /* font-size: 1rem; */
 }
 
+#resumo h2{
+    margin-top: 10px;
+}
+
 #resumo .box-saldos{
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
 }
@@ -329,7 +356,9 @@ header .texto-logo,
     height: 100px;
     width: 160px;
     border-radius: 10px;
+    margin: 10px 0;
 }
+
 
 #resumo .div-entradas i,
 #resumo .div-saidas i,
@@ -364,26 +393,27 @@ header .texto-logo,
 
 .card-valor-descricao{
     display: flex;
-    align-items: center;
+    align-items: center; 
     justify-content: space-between;
-    font-size: 1.2rem;
+    font-size: .9rem;
     font-weight: var(--font-bold);
-    flex-grow: 1;
+    flex-grow: 1; 
     position: relative;
 }
 
 button i{
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .botoes{
     display: flex;
-    gap: 10px;
+    gap: 7px;
 }
 
 .categoria, 
-.data{
-    font-size: .8rem;
+.data,
+.data-entrada{
+    font-size: .7rem;
     color: var(--text-200);
 }
 
@@ -400,11 +430,10 @@ button i{
     left: 50%;
     transform: translate(-50%);
     min-width: 100px;
-    text-align: left;
+    text-align: center;
 }
 
-.data,
-.data-entrada{
+.data{
     padding-top: 2px;
 }
 
@@ -429,12 +458,105 @@ button i{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    
 }
 
 .saldo-chart,
 .entradas-chart,
 .despesas-chart{
-    width: 350px;
-    height: 350px;
+    width: 300px;
+    height: 300px;
+}
+
+/* LARGE DEVICES */
+@media screen and (min-width: 1150px){
+    /* HEADER */
+    header{
+        padding: 10px 30px 10px 20px;
+    }
+
+    button.btn-cadastrar,
+    button.btn-entrar{
+        padding: 10px;
+    }
+
+    /* LOGO */
+    header .img-logo,
+    .barra-lateral .img-logo{
+        width: 50px;
+        margin-right: .7rem;
+    }
+
+    header .texto-logo,
+    .barra-lateral .texto-logo{
+        font-size: 1rem;
+    }
+
+    /* BARRA LATERAL */
+    h2.smart,
+    .span-resumo,
+    .span-entradas,
+    .span-saidas,
+    .span-graficos,
+    .span-sair{
+        display: inline;
+    }
+
+    /* SECTION - FORM LOGIN */
+    body.pagina-principal{
+        grid-template-columns: 250px 1fr;
+    }
+
+    .box-cadastro,
+    .div-login{
+        width: 400px;
+    }
+
+    button.fazer-cadastro-2,
+    button.fazer-login-2{
+        margin-left: 10px; 
+        width: 50%;
+    }
+
+    /* RESUMO */
+    #resumo .box-saldos{
+        flex-direction: row;
+    }
+    
+    #resumo .div-entradas,
+    #resumo .div-saidas,
+    #resumo .div-saldo-mes{
+        margin: 0;
+    }
+
+    /* CARDS - ENTRADA E SAÍDA */
+    .card-valor-descricao{
+        font-size: 1.2rem;
+    }
+
+    .categoria,
+    .data,
+    .data-entrada{
+        font-size: .8rem;
+    }
+    
+    button i{
+        font-size: 1.2rem;
+    }
+
+    .botoes{
+        gap: 10px;
+    }
+
+    .valor,
+    .valor-entrada {
+        text-align: left;
+    }
+
+    /* GRÁFICOS */
+    .saldo-chart,
+    .entradas-chart,
+    .despesas-chart{
+        width: 350px;
+        height: 350px;
+    }
 }

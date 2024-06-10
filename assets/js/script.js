@@ -371,3 +371,22 @@ document.addEventListener("DOMContentLoaded", () => {
     formEntrada.addEventListener("submit", handleSubmitEntrada);
     formDespesa.addEventListener("submit", handleSubmit);
 });
+
+// function mostrarTextoResponsivo(){
+//     const larguraJanela = window.innerWidth;
+//     const divBotoes = document.querySelector(".icons-menu");
+//     const textos = divBotoes.querySelectorAll("span");
+//     const buttonSair = document.querySelector(".button-sair")
+//     const textoSair = buttonSair.querySelector("span")
+
+//     if(larguraJanela <= 400){
+//         textos.style.display = 'none';
+//         textoSair.style.display = 'none';
+//     } else{
+//         textos.style.display = 'inline';
+//         textoSair.style.display = 'inline';
+//     }
+
+//     window.addEventListener('resize', mostrarTextoResponsivo);
+//     window.addEventListener('load', mostrarTextoResponsivo);
+// }

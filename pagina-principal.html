@@ -21,13 +21,14 @@
         </div>
 
         <nav class="icons-menu">
-            <a href="#add-entrada"><i class="ri-arrow-down-circle-fill"></i> <span>Entradas</span></a>
-            <a href="#add-despesa"><i class="ri-arrow-up-circle-fill"></i> <span>Saídas</span></a>
-            <a href="#graficos"><i class="ri-funds-box-line"></i> <span>Gráficos</span></a>
+            <a href="#resumo"><i class="ri-file-text-line"></i><span class="span-resumo">Resumo</span></a>
+            <a href="#add-entrada"><i class="ri-arrow-down-circle-fill"></i> <span class="span-entradas">Entradas</span></a>
+            <a href="#add-despesa"><i class="ri-arrow-up-circle-fill"></i> <span class="span-saidas">Saídas</span></a>
+            <a href="#graficos"><i class="ri-funds-box-line"></i> <span class="span-graficos">Gráficos</span></a>
         </nav>
 
         <div class="user">
-            <button class="button-sair"><i class="ri-logout-circle-r-line"></i> Sair</button>
+            <button class="button-sair"><i class="ri-logout-circle-r-line"></i> <span class="span-sair">Sair</span></button>
         </div>
     </section>
     
@@ -72,7 +73,7 @@
         </section>
 
         <section id="add-despesa">
-            <h2>Despesas</h2>
+            <h2>Saídas</h2>
             <form id="form-despesa">
                 <input type="datetime" id="data" placeholder="01/01/2024" required>
                 <input type="text" id="descricao" placeholder="Descrição" required>

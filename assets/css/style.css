@@ -217,7 +217,11 @@ header .img-logo,
     margin-right: .4rem;
 }
 
-h2.smart{
+.texto-header{
+    display: inline;
+}
+
+.texto-barralateral{
     display: none;
 }
 
@@ -492,7 +496,7 @@ button i{
     }
 
     /* BARRA LATERAL */
-    h2.smart,
+    h2.texto-barralateral,
     .span-resumo,
     .span-entradas,
     .span-saidas,

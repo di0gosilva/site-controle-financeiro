@@ -82,6 +82,8 @@ body.login{
     grid-template-areas: 
         "header"
         "main";
+
+    overflow-x: hidden;
 }
 
 body.pagina-principal{
@@ -175,6 +177,50 @@ main.main-login{
     align-items: center;
     padding: 20px 30px;
     justify-content: space-around;
+}
+
+.box-popup{
+    background-color: var(--bg-100);
+    position: absolute;
+    width: 350px;
+    height: 150px;
+    top: -150%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.25);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: top 0ms ease-in-out 200ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 200ms ease-in-out 0ms;
+}
+
+.box-popup-active{
+    top: 50%;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    transition: top 0ms ease-in-out 0ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 200ms ease-in-out 0ms;
+}
+
+.box-popup span{
+    font-size: var(--h3-font-size);
+    text-align: center;
+}
+
+.box-popup button{
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 10px;
+    margin-top: 15px;
+    padding: 5px;
+    font-weight: var(--font-semi-bold);
 }
 
 button.fazer-cadastro,

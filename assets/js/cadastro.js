@@ -5,9 +5,14 @@ fazerCadastro.addEventListener("click", () => {
     let senha = document.getElementById("senha").value
 
     if(!usuario || !senha){
-        alert("Por favor, preencha todos os campos.")
+        alert("Usuário/Senha incorretos.")
         return
     }
+
+    document.querySelector(".fechar-popup").addEventListener("click", () => {
+        document.querySelector(".box-popup").classList.remove("box-popup-active")
+    })
+
 
     // Recuperar a lista de usuários existentes ou criar uma nova
     const usuariosJSON = localStorage.getItem("usuarios")
@@ -16,7 +21,7 @@ fazerCadastro.addEventListener("click", () => {
     // Verificar se o usuário(cadastrado) já existe
     const usuarioExistente = usuarios.find(user => user.usuario === usuario)
     if(usuarioExistente) {
-        alert("Usuário já existe. Por favor, escolha um nome de usuário diferente.")
+        document.querySelector(".box-popup").classList.add("box-popup-active")
         return
     } 
 

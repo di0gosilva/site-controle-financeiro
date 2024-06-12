@@ -8,17 +8,21 @@ validarLogin.addEventListener("click", () => {
     const usuariosJSON = localStorage.getItem("usuarios")
     let usuarios =  usuariosJSON ? JSON.parse(usuariosJSON) : []
 
+    // Remover popup quando clicar no button "OK"
+    document.querySelector(".fechar-popup-login").addEventListener("click", () => {
+        document.querySelector(".box-popup-login").classList.remove("box-popup-login-active")
+    })
+
     // Verificar se existe usuarios com as credenciais fornecidas
     const usuarioValido = usuarios.find(user => user.usuario === usuarioLogin && user.senha === senhaLogin)
 
     if(usuarioValido) {
-        alert(`Bem-vindo ${usuarioLogin}.`)
         window.location.href = "pagina-principal.html"
         document.getElementById("usuario-login").value = ""
         document.getElementById("senha-login").value = ""
     } else{
-        alert("Usuário e/ou senha incorretos.")
         document.getElementById("usuario-login").value = ""
         document.getElementById("senha-login").value = ""
+        document.querySelector(".box-popup-login").classList.add("box-popup-login-active")
     }
 })

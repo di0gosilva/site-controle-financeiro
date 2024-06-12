@@ -179,7 +179,10 @@ main.main-login{
     justify-content: space-around;
 }
 
-.box-popup{
+.box-popup-login,
+.box-popup,
+.box-popup-2,
+.box-popup-3{
     background-color: var(--bg-100);
     position: absolute;
     width: 350px;
@@ -199,7 +202,10 @@ main.main-login{
                 transform 200ms ease-in-out 0ms;
 }
 
-.box-popup-active{
+.box-popup-login-active,
+.box-popup-active,
+.box-popup-active-2,
+.box-popup-active-3{
     top: 50%;
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
@@ -208,12 +214,18 @@ main.main-login{
                 transform 200ms ease-in-out 0ms;
 }
 
-.box-popup span{
+.box-popup-login span,
+.box-popup span,
+.box-popup-2 span,
+.box-popup-3 span{
     font-size: var(--h3-font-size);
     text-align: center;
 }
 
-.box-popup button{
+.box-popup-login button,
+.box-popup button,
+.box-popup-2 button,
+.box-popup-3 button{
     display: block;
     width: 50%;
     margin: 0 auto;

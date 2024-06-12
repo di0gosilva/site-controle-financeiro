@@ -4,15 +4,21 @@ fazerCadastro.addEventListener("click", () => {
     let usuario = document.getElementById("usuario").value
     let senha = document.getElementById("senha").value
 
+    // Remover popup quando clicar no button "OK" (Preencher input usuario / senha)
+    document.querySelector(".fechar-popup-2").addEventListener("click", () => {
+        document.querySelector(".box-popup-2").classList.remove("box-popup-active-2")
+    })
+
+    // Verificar se os inputs usuário e senha foram digitados
     if(!usuario || !senha){
-        alert("Usuário/Senha incorretos.")
+        document.querySelector(".box-popup-2").classList.add("box-popup-active-2")
         return
     }
 
+    // Remover popup quando clicar no button "OK" (Usuário já cadastrado)
     document.querySelector(".fechar-popup").addEventListener("click", () => {
         document.querySelector(".box-popup").classList.remove("box-popup-active")
     })
-
 
     // Recuperar a lista de usuários existentes ou criar uma nova
     const usuariosJSON = localStorage.getItem("usuarios")
@@ -31,7 +37,13 @@ fazerCadastro.addEventListener("click", () => {
     // Salvar no localStorage
     localStorage.setItem("usuarios", JSON.stringify(usuarios))
 
-    alert("Usuário Cadastrado com sucesso.")
+    // Popup "usuario cadastrado com sucesso"
+    document.querySelector(".box-popup-3").classList.add("box-popup-active-3")
+
+    // Remover popup quando clicar no button "OK" (Usuario cadastrado com sucesso)
+    document.querySelector(".fechar-popup-3").addEventListener("click", () => {
+        document.querySelector(".box-popup-3").classList.remove("box-popup-active-3")
+    })
 
     // Limpar campos do input
     document.getElementById("usuario").value = ""

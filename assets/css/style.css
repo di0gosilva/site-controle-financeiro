@@ -108,6 +108,7 @@ select{
 }
 
 button{
+    color: var(--text-100);
     background-color: var(--primary-100);
     transition: all .3s ease-in-out;
 }
@@ -237,6 +238,7 @@ main.main-login{
 
 button.fazer-cadastro,
 button.validar-login{
+    color: var(--text-100);
     font-weight: var(--font-semi-bold);
 }
 

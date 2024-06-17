@@ -72,6 +72,11 @@ option{
     outline: none;
 }
 
+select,
+option{
+    color: var(--text-100);
+}
+
 body.cadastro,
 body.login{
     height: 100vh;

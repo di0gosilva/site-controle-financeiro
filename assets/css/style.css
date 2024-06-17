@@ -262,6 +262,7 @@ button.fazer-login-2{
     background-color: var(--primary-100);
     padding: .6rem;
     grid-column: 1 / 2;
+    height: 100%;
 
     display: flex;
     flex-direction: column;

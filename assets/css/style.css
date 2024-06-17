@@ -29,19 +29,6 @@
     --font-bold: 700;
 }
 
-/* Fonts Responsivo */
-@media screen and (min-width: 1150px) {
-    :root{
-        --biggest-font-size: 5.5rem;
-        --big-font-size: 2.75rem;
-        --h1-font-size: 2.25rem;
-        --h2-font-size: 1.5rem;
-        --h3-font-size: 1.25rem;
-        --normal-font-size: 1.125rem;
-        --small-font-size: .875rem;
-    }
-}
-
 /* Base */
 *{
     box-sizing: border-box;
@@ -89,6 +76,7 @@ body.login{
         "main";
 
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 body.pagina-principal{
@@ -100,6 +88,8 @@ body.pagina-principal{
 
     display: grid;
     grid-template-columns: 80px 1fr;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 a{
@@ -130,7 +120,6 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 20px 20px 10px 5px;
-    /* background-color: var(--bg-200); */
 }
 
 button.btn-cadastrar,
@@ -262,7 +251,6 @@ button.fazer-login-2{
     background-color: var(--primary-100);
     padding: .6rem;
     grid-column: 1 / 2;
-    height: 100%;
 
     display: flex;
     flex-direction: column;
@@ -398,7 +386,7 @@ header .texto-logo,
 #add-despesa button{
     display: block;
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     padding: 10px;
     border-radius: 10px;
     /* font-size: 1rem; */
@@ -537,28 +525,116 @@ button i{
     height: 300px;
 }
 
-/* LARGE DEVICES */
-@media screen and (min-width: 1150px){
+/* IPADS e TABLETS */
+@media screen and (min-width: 799px) and (max-width: 1199px){
     /* HEADER */
     header{
-        padding: 10px 30px 10px 20px;
+        padding: 40px 30px 10px 20px;
     }
 
     button.btn-cadastrar,
     button.btn-entrar{
-        padding: 10px;
+        padding: .8rem;
+        font-size: 1.1rem;
+    }
+    
+    #resumo .box-saldos{
+        flex-direction: row;
+    }
+
+    /* LOGIN E CADASTRO */
+    .box-cadastro,
+    .div-login{
+        width: 400px;
+    }
+    
+    .div-login{
+        height: 350px;
+    }
+
+    .box-cadastro{
+        height: 100px;
+    }
+
+    .div-login h2{
+        font-size: 2rem;
+        margin-top: -1rem;
+        margin-bottom: .8rem;
+    }
+
+    .div-login input,
+    .div-login button,
+    .box-cadastro button{
+        font-size: 1.3rem;
+    }
+
+    .box-cadastro span{
+        font-size: 1.3rem;
+    }
+
+    button.fazer-cadastro-2,
+    button.fazer-login-2{
+        margin-left: 10px; 
+        width: 40%;
+        padding: .6rem;
+    }
+
+    .box-popup,
+    .box-popup-2,
+    .box-popup-3,
+    .box-popup-login{
+        height: 200px;
+        width: 500px;
+    }
+
+    .box-popup span,
+    .box-popup-2 span,
+    .box-popup-3 span,
+    .box-popup-login span{
+        font-size: 1.5rem;
+        margin-bottom: .7rem;
+    }
+
+    .box-popup .fechar-popup,
+    .box-popup-2 .fechar-popup-2,
+    .box-popup-3 .fechar-popup-3,
+    .box-popup-login .fechar-popup-login{
+        font-size: 1rem;
+        width: 40%;
+        padding: .6rem;
+    }*/
+}
+
+/* LARGE DEVICES */
+@media screen and (min-width: 1200px){
+    input,
+    select,
+    option,
+    button{
+        font-size: 1.4rem;
+    }
+
+    /* HEADER */
+    header{
+        padding: 40px 30px 10px 20px;
+    }
+
+    button.btn-cadastrar,
+    button.btn-entrar{
+        padding: .9rem;
+        font-size: 1.4rem;
     }
 
     /* LOGO */
     header .img-logo,
     .barra-lateral .img-logo{
-        width: 50px;
-        margin-right: .7rem;
+        width: 70px;
+        margin-right: .8rem;
     }
 
     header .texto-logo,
     .barra-lateral .texto-logo{
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
 
     /* BARRA LATERAL */
@@ -573,18 +649,96 @@ button i{
 
     /* SECTION - FORM LOGIN */
     body.pagina-principal{
-        grid-template-columns: 250px 1fr;
+        grid-template-columns: 320px 1fr;
     }
 
+    .barra-lateral .icons-menu a span,
+    .barra-lateral .user button{
+        font-size: 1.3rem;
+    }
+
+    .barra-lateral .icons-menu a i,
+    .barra-lateral .user button i{
+        font-size: 1.8rem;
+    }
+
+    #graficos h2,
+    #resumo h2,
+    #add-entrada h2,
+    #add-despesa h2{
+        font-size: 2rem;
+    }
+
+    #resumo .box-saldos div{
+        width: 210px;
+        height: 130px;
+        justify-content: center;
+        font-size: 1.4rem;
+    }
+
+    #resumo .box-saldos div i{
+        font-size: 1.5rem;
+    }
+
+    /* LOGIN E CADASTRO */
     .box-cadastro,
     .div-login{
-        width: 400px;
+        width: 500px;
+    }
+
+    .div-login{
+        height: 400px;
+    }
+
+    .box-cadastro{
+        height: 120px;
+    }
+
+    .div-login h2{
+        font-size: 2rem;
+        margin-top: -1rem;
+        margin-bottom: 2rem;
+    }
+
+    .div-login input,
+    .div-login button,
+    .box-cadastro button{
+        font-size: 1.3rem;
+    }
+
+    .box-cadastro span{
+        font-size: 1.3rem;
     }
 
     button.fazer-cadastro-2,
     button.fazer-login-2{
         margin-left: 10px; 
         width: 50%;
+        padding: .6rem;
+    }
+
+    .box-popup,
+    .box-popup-2,
+    .box-popup-3,
+    .box-popup-login{
+        height: 250px;
+        width: 600px;
+    }
+    .box-popup span,
+    .box-popup-2 span,
+    .box-popup-3 span,
+    .box-popup-login span{
+        font-size: 1.5rem;
+        margin-bottom: .7rem;
+    }
+
+    .box-popup .fechar-popup,
+    .box-popup-2 .fechar-popup-2,
+    .box-popup-3 .fechar-popup-3,
+    .box-popup-login .fechar-popup-login{
+        font-size: 1.3rem;
+        width: 40%;
+        padding: .6rem;
     }
 
     /* RESUMO */
@@ -606,7 +760,7 @@ button i{
     .categoria,
     .data,
     .data-entrada{
-        font-size: .8rem;
+        font-size: .9rem;
     }
     
     button i{
@@ -628,5 +782,190 @@ button i{
     .despesas-chart{
         width: 350px;
         height: 350px;
+    }
+}
+
+@media screen and (min-width: 2100px){
+    input,
+    select,
+    option,
+    button{
+        font-size: 1.8rem;
+    }
+
+    /* HEADER */
+    header{
+        padding: 70px 40px 10px 20px;
+    }
+
+    button.btn-cadastrar,
+    button.btn-entrar{
+        margin-top: 1rem;
+        padding: 1.2rem;
+        font-size: 2rem;
+    }
+
+    /* BARRA LATERAL */
+    body.pagina-principal{
+        grid-template-columns: 400px 1fr;
+    }
+
+    .box-logo{
+        margin-left: 1rem;
+        margin-top: 1rem;
+    }
+
+    .user{
+        margin-bottom: 1rem;
+    }
+
+    .barra-lateral .icons-menu a span,
+    .barra-lateral .user button{
+        font-size: 1.6rem;
+    }
+
+    .barra-lateral .icons-menu a i,
+    .barra-lateral .user button i{
+        font-size: 2.2rem;
+    }
+
+    /* LOGO */
+    header .img-logo,
+    .barra-lateral .img-logo{
+        width: 90px;
+        margin-right: 1rem;
+    }
+
+    header .texto-logo,
+    .barra-lateral .texto-logo{
+        font-size: 1.5rem;
+    }
+
+    #graficos h2,
+    #resumo h2,
+    #add-entrada h2,
+    #add-despesa h2{
+        font-size: 3rem;
+    }
+
+    /* LOGIN E CADASTRO */
+    .box-cadastro,
+    .div-login{
+        width: 700px;
+    }
+
+    .div-login{
+        height: 500px;
+    }
+
+    .box-cadastro{
+        height: 150px;
+    }
+
+    .div-login h2{
+        font-size: 3rem;
+        margin-top: -1.5rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .div-login input,
+    .div-login button,
+    .box-cadastro button{
+        font-size: 1.6rem;
+    }
+
+    .box-cadastro span{
+        font-size: 1.9rem;
+    }
+
+    button.fazer-cadastro-2,
+    button.fazer-login-2{
+        margin-left: 10px; 
+        width: 50%;
+        padding: .8rem;
+    }
+
+    .box-popup,
+    .box-popup-2,
+    .box-popup-3,
+    .box-popup-login{
+        height: 300px;
+        width: 900px;
+    }
+    .box-popup span,
+    .box-popup-2 span,
+    .box-popup-3 span,
+    .box-popup-login span{
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .box-popup .fechar-popup,
+    .box-popup-2 .fechar-popup-2,
+    .box-popup-3 .fechar-popup-3,
+    .box-popup-login .fechar-popup-login{
+        font-size: 1.6rem;
+        width: 40%;
+        padding: .7rem;
+    }
+
+    /* RESUMO */
+    #resumo{
+        padding: 0 2rem 2rem 2rem;
+    }
+
+    #resumo .box-saldos{
+        margin-top: 1rem;
+    }
+
+    #resumo .box-saldos div{
+        width: 250px;
+        height: 150px;
+        justify-content: center;
+        font-size: 1.7rem;
+    }
+
+    #resumo .box-saldos div i{
+        font-size: 1.5rem;
+    }
+
+    /* LISTA ENTRADAS & DESPESAS */
+    #lista-entrada .entrada,
+    #lista-despesa .despesa{ 
+        padding: 1.5rem 1rem;
+    }
+
+    .card-valor-descricao{
+        font-size: 1.7rem;
+    }
+
+    button i{
+        font-size: 2rem;
+    }
+
+    .botoes{
+        gap: 1.3rem;
+    }
+
+    .categoria, 
+    .data,
+    .data-entrada{
+        font-size: 1.4rem;
+    }
+
+    .editar-despesa,
+    .editar-entrada,
+    .remover-entrada,
+    .remover-despesa{
+        padding: .8rem;
+        border-radius: 5px;
+    } 
+
+    /* GRÁFICOS */
+    .saldo-chart,
+    .entradas-chart,
+    .despesas-chart{
+        width: 500px;
+        height: 500px;
     }
 }

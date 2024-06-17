@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
         saldoChart = new Chart(ctx, {
             type: 'pie',
             data: {
-                labels: ['Entradas', 'Saídas', 'Saldo Mês'],
+                labels: ['Entradas', 'Saídas', 'Saldo do Mês'],
                 datasets: [{
                     data: [totalEntrada, totalSaida, saldoMes],
                     backgroundColor: ['#4caf50', '#f44336', '#2196f3'],
@@ -139,12 +139,18 @@ document.addEventListener("DOMContentLoaded", () => {
             options: {
                 responsive: true,
                 plugins: {
-                    legend: {
+                    labels: {
                         position: 'top',
+                        font: {
+                            size: 12,
+                        }
                     },
                     title: {
                         display: true,
-                        text: 'Resumo do Mês'
+                        text: 'Saldo do Mês',
+                        font: {
+                            size: 16
+                        }
                     }
                 }
             },
@@ -170,10 +176,18 @@ document.addEventListener("DOMContentLoaded", () => {
                 plugins: {
                     legend: {
                         position: 'top',
+                        labels: {
+                            font: {
+                                size: 12
+                            }
+                        }
                     },
                     title: {
                         display: true,
-                        text: 'Distribuição das Entradas'
+                        text: 'Distribuição das Entradas',
+                        font: {
+                            size: 16
+                        }
                     }
                 }
             },
@@ -199,10 +213,18 @@ document.addEventListener("DOMContentLoaded", () => {
                 plugins: {
                     legend: {
                         position: 'top',
+                        labels: {
+                            font: {
+                                size: 12,
+                            }
+                        }
                     },
                     title: {
                         display: true,
-                        text: 'Distribuição das Despesas'
+                        text: 'Distribuição das Saídas',
+                        font: {
+                            size: 16
+                        }
                     }
                 }
             },
@@ -371,22 +393,3 @@ document.addEventListener("DOMContentLoaded", () => {
     formEntrada.addEventListener("submit", handleSubmitEntrada);
     formDespesa.addEventListener("submit", handleSubmit);
 });
-
-// function mostrarTextoResponsivo(){
-//     const larguraJanela = window.innerWidth;
-//     const divBotoes = document.querySelector(".icons-menu");
-//     const textos = divBotoes.querySelectorAll("span");
-//     const buttonSair = document.querySelector(".button-sair")
-//     const textoSair = buttonSair.querySelector("span")
-
-//     if(larguraJanela <= 400){
-//         textos.style.display = 'none';
-//         textoSair.style.display = 'none';
-//     } else{
-//         textos.style.display = 'inline';
-//         textoSair.style.display = 'inline';
-//     }
-
-//     window.addEventListener('resize', mostrarTextoResponsivo);
-//     window.addEventListener('load', mostrarTextoResponsivo);
-// }

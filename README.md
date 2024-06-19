@@ -11,7 +11,7 @@ Ter um sistema onde eu possa registrar o controle de gastos mensais, com apresen
 
 <hr>
 
-Funcionalidades implementadas:
+Funcionalidades implementadas:<br>
 Validação de usuário e senha<br>
 Validação de usuário existente<br>
 Cadastro de dados (entradas e saídas)<br>

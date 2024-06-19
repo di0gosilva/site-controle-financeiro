@@ -1,3 +1,4 @@
+<hr>
 Apresentação do Projeto Final de disciplina de Lógica de Programação
 
 Site Controle Financeiro - Smartcash

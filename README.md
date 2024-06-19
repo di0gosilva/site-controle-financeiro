@@ -12,11 +12,11 @@ Ter um sistema onde eu possa registrar o controle de gastos mensais, com apresen
 <hr>
 
 Funcionalidades implementadas:
-Validação de usuário e senha
-Validação de usuário existente
-Cadastro de dados (entradas e saídas)
-Edição de dados
-Exclusão de dados
+Validação de usuário e senha<br>
+Validação de usuário existente<br>
+Cadastro de dados (entradas e saídas)<br>
+Edição de dados<br>
+Exclusão de dados<br>
 Armazenamento de dados (localStorage)
 
 <hr>

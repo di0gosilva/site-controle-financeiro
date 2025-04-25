@@ -9,6 +9,18 @@ Este projeto é um site de controle financeiro pessoal que permite aos usuários
 - **Relatórios**: Geração de relatórios simples sobre as finanças.
 - **Controle por categoria**: Possibilidade de categorizar as receitas e despesas (ex.: alimentação, transporte, etc.).
 
+## Demonstração 📸
+
+### Página de Login 🔑
+
+### Página de Cadastro 👤
+
+### Entradas 💵
+
+### Despesas 💸
+
+### Gráficos 📈
+
 ## Tecnologias Utilizadas ⚙️
 
 - Html

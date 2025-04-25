@@ -6,7 +6,6 @@ Este projeto é um site de controle financeiro pessoal que permite aos usuários
 
 - **Registro de receitas e despesas**: Permite adicionar entradas de dinheiro e despesas mensais.
 - **Visualização de saldo**: Exibe o saldo atual baseado nas receitas e despesas registradas.
-- **Relatórios**: Geração de relatórios simples sobre as finanças.
 - **Controle por categoria**: Possibilidade de categorizar as receitas e despesas (ex.: alimentação, transporte, etc.).
 
 ## Demonstração 📸

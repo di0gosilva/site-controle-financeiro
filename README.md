@@ -11,15 +11,20 @@ Este projeto é um site de controle financeiro pessoal que permite aos usuários
 
 ## Demonstração 📸
 
-### Página de Login 🔑
+### 🔑 Página de Login
+![Página de Login](./assets/readme/login.png)
 
-### Página de Cadastro 👤
+### 👤 Página de Cadastro
+![Página de Cadastro](./assets/readme/cadastro.png)
 
-### Entradas 💵
+### 💵 Entradas
+![Página de Entradas](./assets/readme/entradas.png)
 
-### Despesas 💸
+### 💸 Despesas
+![Página de Despesas](./assets/readme/despesas.png)
 
-### Gráficos 📈
+### 📈 Gráficos
+![Graficos](./assets/readme/graficos.png)
 
 ## Tecnologias Utilizadas ⚙️
 
